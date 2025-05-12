@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = ami
+  ami  = "ami-0e35ddab05955cf57"
   instance_type = instance_type
 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "aws_instance" "web" {
-  instance_type = "t3.micro"
-  ami           = "ami-0e35ddab05955cf57"
+variable "aws_instance" {
+  default = t3.micro
+  description = "This id new demo instance"
 }
