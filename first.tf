@@ -16,6 +16,11 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
+output "instance_ip_addr" {
+  value = aws_instance.web.private_ip
+}
+
+
 resource "aws_instance" "web" {
   ami  = "ami-0e35ddab05955cf57"
   instance_type = var.instance_type
