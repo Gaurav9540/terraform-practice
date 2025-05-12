@@ -18,7 +18,7 @@ variable "instance_type" {
 
 resource "aws_instance" "web" {
   ami  = "ami-0e35ddab05955cf57"
-  instance_type = instance_type
+  instance_type = var.instance_type
 
   tags = {
     Name = "MyWebServer"
