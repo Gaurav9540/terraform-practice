@@ -76,7 +76,7 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
   subnet_id = aws_subnet.public.id
   associate_public_ip_address = true
-  key_name = "new-key.pem"
+  key_name = "new-key"
 
   tags = {
     Name = "MyWebServer"
