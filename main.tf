@@ -47,7 +47,6 @@ resource "aws_route_table_association" "public_assoc" {
   route_table_id = aws_route_table.public.id
 }
 
-
 resource "aws_instance" "web" {
   ami  = var.ami_id
   instance_type = var.instance_type

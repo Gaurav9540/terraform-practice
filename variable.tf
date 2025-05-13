@@ -29,7 +29,7 @@ variable "ami_id" {
 }
 
 variable "instance_name" {
-  default = "MyWebServer"
+  default = "INSTANCE-1"
 }
 
 output "instance_ip_addr" {
