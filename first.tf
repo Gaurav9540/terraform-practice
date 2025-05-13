@@ -1,10 +1,10 @@
-terraform {
-  backend "s3" {
-    bucket = "s3-for-terraform-demo"
-    key    = "new-key.pem"
-    region = "ap-south-1"
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "s3-for-terraform-demo"
+#     key    = "new-key.pem"
+#     region = "ap-south-1"
+#   }
+# }
 
 provider "aws" {
   region = "ap-south-1" 
