@@ -416,3 +416,28 @@ variable "region" {
 region        = "us-west-2"
 instance_type = "t2.micro"
 ```
+
+
+<hr>
+
+🧱 **Terraform Modules — Explained**  <br>
+In Terraform, a module is a container for multiple resources that are used together. Modules allow you to:  <br>
+ - Organize and reuse code   <br>
+ - Make configurations cleaner and more scalable  <br>
+ - Follow DRY principles (Don't Repeat Yourself)  <br>
+
+```ssh
+terraform/
+│
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+├── modules/
+│   └── vpc/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+```
+
+<hr>
