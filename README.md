@@ -386,9 +386,12 @@ terraform {
 1. **local-exec :** Runs commands on the machine where Terraform is executed (your local machine or CI/CD environment). <br>
 2. **remote-exec :** Runs commands on the resource being created, typically over SSH (Linux) or WinRM (Windows). <br>
 
+
+<hr>
+
 **Diff in variable.tf v/s terraform.tfvars**
 
-🔹 *variables.tf* — Variable Definitions 
+🔹 *variables.tf* — Variable Definitions  <br>
     - This file is where you declare input variables — their names, types, descriptions, and optional default values. <br>
     - Must need of block <br>
 
