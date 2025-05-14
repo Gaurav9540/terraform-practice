@@ -25,3 +25,4 @@ module "instance" {
   key_name = var.key_name
   instance_name = var.instance_name
 }
+
