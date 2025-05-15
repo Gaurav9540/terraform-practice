@@ -28,6 +28,7 @@ module "instance" {
 
 module "aws_security_group" {
   source = "./security-group"
+  vpc_id = module.vpc.vpc_id
   name = var.name
   desc = var.desc
 }
