@@ -1,3 +1,3 @@
 output "instance_ip_addr" {
-  value = module.instance.private_ip
+  value = module.instance.instance_ip_addr
 }
