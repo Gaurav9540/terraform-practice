@@ -20,6 +20,7 @@ module "vpc" {
 
 module "instance" {
   source = "./instance"
+  subnet_id  = module.vpc.public_subnet_id
   ami_id = var.ami_id
   instance_type = var.instance_type
   key_name = var.key_name
