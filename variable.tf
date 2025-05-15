@@ -32,4 +32,10 @@ variable "instance_name" {
   default = "INSTANCE-1"
 }
 
+variable "name" {
+  default = "mysg"
+}
 
+variable "desc" {
+  default = "newly created security group for demo"
+}

@@ -26,3 +26,8 @@ module "instance" {
   instance_name = var.instance_name
 }
 
+module "aws_security_group" {
+  source = "./security-group"
+  name = var.name
+  desc = var.desc
+}
