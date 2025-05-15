@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "s3-bucket-terraform-demo-9540"
+    bucket = "s3-bucket-terraform-demo-9541"
     key    = "new-key.pem"
     region = "ap-south-1"
   }
