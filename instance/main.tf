@@ -20,12 +20,13 @@ resource "aws_instance" "private_web" {
   vpc_security_group_ids = var.security_group_ids
 
   user_data = <<-EOF
-              #!/bin/bash
-              sudo yum update -y
-              sudo yum install -y httpd
-              sudo systemctl start httpd
-              sudo systemctl enable httpd
-              EOF
+            #!/bin/bash
+            sudo apt-get update -y
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+            EOF
+
 
   tags = {
     Name = var.private_instance_name
