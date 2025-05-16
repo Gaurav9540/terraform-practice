@@ -19,13 +19,15 @@ module "vpc" {
 }
 
 module "instance" {
-  source = "./instance"
-  ami_id = var.ami_id
-  instance_type = var.instance_type
-  key_name = var.key_name
-  subnet_id  = module.vpc.public_subnet_id
-  instance_name = var.instance_name
-  security_group_ids = [module.aws_security_group.sg_id]
+  source                = "./instance"
+  ami_id                = var.ami_id
+  instance_type         = var.instance_type
+  key_name              = var.key_name
+  public_subnet_id      = module.vpc.public_subnet_id
+  private_subnet_id     = module.vpc.private_subnet_id
+  public_instance_name  = var.public_instance_name
+  private_instance_name = var.private_instance_name
+  security_group_ids    = [module.aws_security_group.sg_id]
 }
 
 module "aws_security_group" {
