@@ -1,12 +1,25 @@
 resource "aws_instance" "web" {
   ami  = var.ami_id
   instance_type = var.instance_type
-  subnet_id = var.subnet_id
+  subnet_id = var.public_subnet_id
   associate_public_ip_address = true
   key_name = var.key_name
   vpc_security_group_ids = var.security_group_ids
 
   tags = {
-    Name = var.instance_name
+    Name = var.public_instance_name
+  }
+}
+
+resource "aws_instance" "private_web" {
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  subnet_id              = var.private_subnet_id   # Use a private subnet here
+  associate_public_ip_address = false              # Important: no public IP
+  key_name               = var.key_name
+  vpc_security_group_ids = var.security_group_ids
+
+  tags = {
+    Name = var.private_instance_name
   }
 }

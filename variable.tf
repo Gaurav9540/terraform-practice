@@ -28,8 +28,12 @@ variable "ami_id" {
   default = "ami-0e35ddab05955cf57"
 }
 
-variable "instance_name" {
-  default = "INSTANCE-1"
+variable "public_instance_name" {
+  default = "public-instance"
+}
+
+variable "private_instance_name" {
+  default = "private-instance"
 }
 
 variable "name" {
