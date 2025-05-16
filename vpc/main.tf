@@ -49,13 +49,13 @@ resource "aws_route_table_association" "public_assoc" {
 
 
 resource "aws_eip" "nat_eip" {
-  vpc = true
+  domain = "vpc"
 }
 
 resource "aws_nat_gateway" "nat_gw" {
   allocation_id = aws_eip.nat_eip.id
   subnet_id     = aws_subnet.public.id  # Replace with your public subnet reference
-  depends_on    = [aws_internet_gateway.igw]
+  depends_on    = [aws_internet_gateway.gw]
   tags = {
     Name = "NAT-Gateway"
   }
