@@ -380,6 +380,8 @@ terraform {
 
 **Day 04**
 
+**Data Block :** To used and manage existing resources.  <br> 
+
 **Terraform Provisioners :** Provisioners in Terraform are used to execute scripts or commands on a local machine or remote resource after it is created or destroyed.  <br>
 
 *Types of Provisioners :* <br>
